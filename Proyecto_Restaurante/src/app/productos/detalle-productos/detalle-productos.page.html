@@ -1,9 +1,76 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-item class="ion-text-center" color="dark">
+
+    
     <ion-title>detalle-productos</ion-title>
+    
+  </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-label></ion-label>
+  
+  <ion-grid>
+    <ion-row>
+
+      <ion-col fill="clear" color="ligth">
+        <ion-button>
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      
+      </ion-col>
+  
+
+
+    <ion-col size="9">
+      <ion-slides>
+        <ion-slide *ngFor="let item of [1,2]">
+          <img [src]="datos.url" alt="">
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+    <ion-col>
+      <div class="linea-gris"></div>
+      <ion-label class="ion-text-center">
+        <p>Nombre Del Producto</p>
+        <p>{{datos.titulo}}</p>
+        <div>
+         
+        </div>
+        <p>Comentarios del Producto</p>
+        <p>{{datos.comentarios}}</p>
+      </ion-label>
+      <div class="linea-gris"></div>
+
+        </ion-col>
+
+
+
+
+
+  </ion-row>
+  </ion-grid>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-row>
+        <ion-col size="6" class="ion-text-center desc">
+          <ion-button fill="clear" color="ligth">
+            Descripcion
+          </ion-button>
+        </ion-col>
+
+
+        <ion-col size="6" class="ion-text-center desc">
+          <ion-button fill="clear" color="ligth">
+         Volver
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-footer>
+
 </ion-content>

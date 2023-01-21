@@ -48,10 +48,10 @@ export class ProductosService {
     }
   
     //buscar por id
-    getProductosById(productoID: string){
+    getProductosById(productoID: string ){
       return{
         ...this.productos.find(p => {
-          return p.id === productoID
+          return p.id == productoID
         })
       }
     }
